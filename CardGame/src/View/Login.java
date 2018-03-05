@@ -27,7 +27,7 @@ public class Login extends JFrame {
 		setSize(600,600);
 		
 		l.setFont(new Font("Times New Roman", Font.BOLD,24));
-		c.add(l, BorderLayout.NORTH);
+		overview.add(l, BorderLayout.NORTH);
 		
 		up.add(name);
 		up.add(Ntext);
@@ -43,7 +43,7 @@ public class Login extends JFrame {
 		button.add(regi);
 		button.add(login);
 		
-		c.add(button, BorderLayout.SOUTH);
+		overview.add(button, BorderLayout.SOUTH);
 		
 		c.add(overview);
 		

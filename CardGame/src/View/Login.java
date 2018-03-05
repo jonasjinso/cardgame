@@ -31,7 +31,8 @@ public class Login extends JFrame {
 		setSize(250,400);
 		setLocation(800,300);
 		
-		l.setFont(new Font("Times New Roman", Font.BOLD,24));
+		//l.setFont(new Font("Times New Roman", Font.BOLD,24));
+		l.setIcon(img);
 		mitte.add(l);
 		overview.add(mitte);
 		
@@ -56,7 +57,7 @@ public class Login extends JFrame {
 		c.add(overview);
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(false);
+		setVisible(true);
 	}
 	
 }

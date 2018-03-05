@@ -1,6 +1,7 @@
 package View;
 
 import java.awt.*;
+import java.awt.geom.FlatteningPathIterator;
 
 import javax.swing.*;
 
@@ -12,8 +13,9 @@ public class Login extends JFrame {
 	private JLabel l = new JLabel("Rock-Hewn");
 	
 	private JPanel center = new JPanel(new GridLayout(0,1));
-	private JPanel up = new JPanel();
-	private JPanel down = new JPanel();
+	private JPanel align = new JPanel(new FlowLayout(FlowLayout.LEFT));
+	private JPanel left = new JPanel(new GridLayout(0, 1));
+	private JPanel right = new JPanel(new GridLayout(0, 1));
 	private JLabel name = new JLabel("User: ");
 	private JLabel passwort = new JLabel("Passwort: ");
 	private JTextField Ntext = new JTextField(20);
@@ -25,20 +27,23 @@ public class Login extends JFrame {
 	
 	public Login(){
 		super("Rock-Hewn");
-		setSize(600,600);
+		setSize(250,400);
+		setLocation(800,300);
 		
 		l.setFont(new Font("Times New Roman", Font.BOLD,24));
 		mitte.add(l);
 		overview.add(mitte);
 		
-		up.add(name);
-		up.add(Ntext);
+		left.add(name);
+		left.add(passwort);
 		
-		down.add(passwort);
-		down.add(Ptext);
+		right.add(Ntext);
+		right.add(Ptext);
 		
-		center.add(up);
-		center.add(down);
+		align.add(left);
+		align.add(right);
+		
+		center.add(align, BorderLayout.CENTER);
 		
 		overview.add(center, BorderLayout.CENTER);
 		

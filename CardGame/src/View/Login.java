@@ -26,7 +26,7 @@ public class Login extends JFrame {
 	private JButton login = new JButton("Login");
 	
 	public Login(){
-		super("Rock-Hewn");
+		super("Rock-Hewn-Login");
 		setSize(250,400);
 		setLocation(800,300);
 		
@@ -55,7 +55,7 @@ public class Login extends JFrame {
 		c.add(overview);
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+		setVisible(false);
 	}
 	
 }

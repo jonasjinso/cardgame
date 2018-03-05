@@ -7,7 +7,7 @@ import javax.swing.*;
 public class Login extends JFrame {
 
 	private Container c = getContentPane();
-	private JPanel overview = new JPanel();
+	private JPanel overview = new JPanel(new GridLayout(0, 1));
 	private JLabel l = new JLabel("Rock-Hewn");
 	
 	private JPanel center = new JPanel(new GridLayout(0,1));

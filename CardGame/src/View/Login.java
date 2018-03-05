@@ -13,8 +13,8 @@ public class Login extends JFrame {
 	private JPanel center = new JPanel(new GridLayout(0,1));
 	private JPanel up = new JPanel();
 	private JPanel down = new JPanel();
-	private JLabel name = new JLabel();
-	private JLabel passwort = new JLabel();
+	private JLabel name = new JLabel("User: ");
+	private JLabel passwort = new JLabel("Passwort: ");
 	private JTextField Ntext = new JTextField();
 	private JTextField Ptext = new JTextField();
 	

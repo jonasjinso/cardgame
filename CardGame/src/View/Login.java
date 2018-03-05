@@ -10,6 +10,7 @@ public class Login extends JFrame {
 	private Container c = getContentPane();
 	private JPanel overview = new JPanel(new GridLayout(0, 1));
 	private JPanel mitte = new JPanel();
+	private ImageIcon img = new ImageIcon("logoHearthstone_Rock_HEwn.pdf");
 	private JLabel l = new JLabel("Rock-Hewn");
 	
 	private JPanel center = new JPanel(new GridLayout(0,1));

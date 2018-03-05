@@ -22,6 +22,9 @@ public class Launcher extends JFrame{
 
 	private JList gamelist = new JList();
 	private JScrollPane sc0 = new JScrollPane(gamelist);
+	
+	private ImageIcon img = new ImageIcon("logoHearthstone_Rock_HEwn.png");
+	private JToggleButton tb = new JToggleButton();
 
 
 
@@ -48,8 +51,12 @@ public class Launcher extends JFrame{
 		gbc.gridwidth = 1;
 		gbc.weightx = 1;
 		gbc.weighty = 1;
-		gbl.setConstraints(sc0, gbc);
-		p.add(sc0);
+		gbl.setConstraints(tb, gbc);
+		
+		img.setImage(img.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
+		tb.setIcon(img);
+		
+		p.add(tb);
 
 		c.add(p, BorderLayout.CENTER);
 

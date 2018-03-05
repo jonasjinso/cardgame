@@ -56,6 +56,6 @@ public class Launcher extends JFrame{
 
 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(false);
+		setVisible(true);
 	}
 }

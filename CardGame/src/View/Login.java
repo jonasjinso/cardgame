@@ -26,7 +26,7 @@ public class Login extends JFrame {
 		super("Rock-Hewn");
 		setSize(600,600);
 		
-		l.setFont(new Font("Times New Roman",24, Font.BOLD));
+		l.setFont(new Font("Times New Roman", Font.BOLD,24));
 		c.add(l, BorderLayout.NORTH);
 		
 		up.add(name);

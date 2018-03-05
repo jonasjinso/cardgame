@@ -11,7 +11,7 @@ public class Login extends JFrame {
 	private JPanel overview = new JPanel(new GridLayout(0, 1));
 	private JPanel mitte = new JPanel();
 	private ImageIcon img = new ImageIcon("logoHearthstone_Rock_HEwn.pdf");
-	private JLabel l = new JLabel("Rock-Hewn");
+	private JLabel l = new JLabel();
 	
 	private JPanel center = new JPanel(new GridLayout(0,1));
 	private JPanel align = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -32,6 +32,7 @@ public class Login extends JFrame {
 		setLocation(800,300);
 		
 		//l.setFont(new Font("Times New Roman", Font.BOLD,24));
+		img.setImage(img.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 		l.setIcon(img);
 		mitte.add(l);
 		overview.add(mitte);

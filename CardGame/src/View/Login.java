@@ -1,5 +1,54 @@
 package View;
 
-public class Login {
+import java.awt.*;
 
+import javax.swing.*;
+
+public class Login extends JFrame {
+
+	private Container c = getContentPane();
+	private JPanel overview = new JPanel();
+	private JLabel l = new JLabel("Rock-Hewn");
+	
+	private JPanel center = new JPanel(new GridLayout(0,1));
+	private JPanel up = new JPanel();
+	private JPanel down = new JPanel();
+	private JLabel name = new JLabel();
+	private JLabel passwort = new JLabel();
+	private JTextField Ntext = new JTextField();
+	private JTextField Ptext = new JTextField();
+	
+	private JPanel button = new JPanel();
+	private JButton regi = new JButton("Registrieren");
+	private JButton login = new JButton("Login");
+	
+	public Login(){
+		super("Rock-Hewn");
+		setSize(600,600);
+		
+		l.setFont(new Font("Times New Roman",24, Font.BOLD));
+		overview.add(l, BorderLayout.NORTH);
+		
+		up.add(name);
+		up.add(Ntext);
+		
+		down.add(passwort);
+		down.add(Ptext);
+		
+		center.add(up);
+		center.add(down);
+		
+		overview.add(center, BorderLayout.CENTER);
+		
+		button.add(regi);
+		button.add(login);
+		
+		overview.add(button, BorderLayout.SOUTH);
+		
+		c.add(overview);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	
 }

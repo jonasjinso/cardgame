@@ -8,6 +8,7 @@ public class Login extends JFrame {
 
 	private Container c = getContentPane();
 	private JPanel overview = new JPanel(new GridLayout(0, 1));
+	private JPanel mitte = new JPanel();
 	private JLabel l = new JLabel("Rock-Hewn");
 	
 	private JPanel center = new JPanel(new GridLayout(0,1));
@@ -15,8 +16,8 @@ public class Login extends JFrame {
 	private JPanel down = new JPanel();
 	private JLabel name = new JLabel("User: ");
 	private JLabel passwort = new JLabel("Passwort: ");
-	private JTextField Ntext = new JTextField();
-	private JTextField Ptext = new JTextField();
+	private JTextField Ntext = new JTextField(20);
+	private JTextField Ptext = new JTextField(20);
 	
 	private JPanel button = new JPanel();
 	private JButton regi = new JButton("Registrieren");
@@ -27,7 +28,8 @@ public class Login extends JFrame {
 		setSize(600,600);
 		
 		l.setFont(new Font("Times New Roman", Font.BOLD,24));
-		overview.add(l, BorderLayout.NORTH);
+		mitte.add(l);
+		overview.add(mitte);
 		
 		up.add(name);
 		up.add(Ntext);

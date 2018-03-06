@@ -30,6 +30,9 @@ public class Launcher extends JFrame{
 	
 	private ImageIcon img1 = new ImageIcon("Test.png");
 	private JToggleButton tb1 = new JToggleButton();
+	
+	private ImageIcon gamelogo = new ImageIcon("rock_hewn.png");
+	private JLabel gamename = new JLabel();
 
 	private JButton play = new JButton("Spielen");
 	private JPanel go = new JPanel();
@@ -37,7 +40,7 @@ public class Launcher extends JFrame{
 
 	public Launcher(){
 		super("Rock-Hewn-Launcher");
-		setSize(800,600);
+		setSize(1200,600);
 		
 		//Align-Right
 		mb.add(Box.createHorizontalGlue());
@@ -80,13 +83,25 @@ public class Launcher extends JFrame{
 		
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridx = 1;
+		gbc.gridy = 0;
+		gbc.gridheight = 1;
+		gbc.gridwidth = 1;
+		gbc.weightx = 1;
+		gbc.weighty = 1;
+		gbl.setConstraints(gamename, gbc);
+		gamelogo.setImage(gamelogo.getImage().getScaledInstance(656, 164, Image.SCALE_SMOOTH));
+		gamename.setIcon(gamelogo);
+		p.add(gamename);
+		
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.gridx = 2;
 		gbc.gridy = 2;
 		gbc.gridheight = 1;
 		gbc.gridwidth = 1;
 		gbc.weightx = 1;
 		gbc.weighty = 1;
 		gbl.setConstraints(go, gbc);
-		
+		play.setPreferredSize(new Dimension(200,100));
 		go.add(play);
 		
 		p.add(go);

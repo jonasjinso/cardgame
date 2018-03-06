@@ -80,7 +80,7 @@ public class Launcher extends JFrame{
 		
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridx = 1;
-		gbc.gridy = 1;
+		gbc.gridy = 2;
 		gbc.gridheight = 1;
 		gbc.gridwidth = 1;
 		gbc.weightx = 1;

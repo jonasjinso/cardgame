@@ -27,17 +27,22 @@ public class Launcher extends JFrame{
 	
 	private ImageIcon img = new ImageIcon("logoHearthstone_Rock_HEwn.png");
 	private JToggleButton tb = new JToggleButton();
+	private JPanel b = new JPanel();
 	
 	private ImageIcon img1 = new ImageIcon("Test.png");
 	private JToggleButton tb1 = new JToggleButton();
+	private JPanel b1 = new JPanel();
 	
 	private ImageIcon gamelogo = new ImageIcon("rock_hewn.png");
 	private JLabel gamename = new JLabel();
+	private JPanel logo = new JPanel();
 
 	private JButton play = new JButton("Spielen");
 	private JPanel go = new JPanel();
-
-
+	
+	private JTextArea text = new JTextArea("HELLO,"+"\n"+"Welcome to Rock-Hewn."+"\n"+"CARDGAME!!!!!!!!!!!!!!!!!!!!!");
+	private JPanel fortext = new JPanel();
+	
 	public Launcher(){
 		super("Rock-Hewn-Launcher");
 		setSize(1200,600);
@@ -67,11 +72,12 @@ public class Launcher extends JFrame{
 		gbl.setConstraints(tb, gbc);
 		img.setImage(img.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
 		tb.setIcon(img);
-		p.add(tb);
+		b.add(tb);
+		p.add(b);
 		
 		gbc.fill = GridBagConstraints.BOTH;
-		gbc.gridx = 0;
-		gbc.gridy = 1;
+		gbc.gridx = 1;
+		gbc.gridy = 0;
 		gbc.gridheight = 1;
 		gbc.gridwidth = 1;
 		gbc.weightx = 1;
@@ -79,7 +85,8 @@ public class Launcher extends JFrame{
 		gbl.setConstraints(tb1, gbc);
 		img1.setImage(img1.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
 		tb1.setIcon(img1);
-		p.add(tb1);
+		b1.add(tb1);
+		p.add(b1);
 		
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridx = 1;
@@ -91,7 +98,20 @@ public class Launcher extends JFrame{
 		gbl.setConstraints(gamename, gbc);
 		gamelogo.setImage(gamelogo.getImage().getScaledInstance(656, 164, Image.SCALE_SMOOTH));
 		gamename.setIcon(gamelogo);
-		p.add(gamename);
+		logo.add(gamename);
+		p.add(logo);
+		
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		gbc.gridheight = 1;
+		gbc.gridwidth = 1;
+		gbc.weightx = 1;
+		gbc.weighty = 1;
+		gbl.setConstraints(text, gbc);
+		text.setOpaque(false);
+		fortext.add(text);
+		p.add(fortext);
 		
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridx = 2;

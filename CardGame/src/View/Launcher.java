@@ -27,11 +27,10 @@ public class Launcher extends JFrame{
 	
 	private ImageIcon img = new ImageIcon("logoHearthstone_Rock_HEwn.png");
 	private JToggleButton tb = new JToggleButton();
-	private JPanel b = new JPanel();
 	
 	private ImageIcon img1 = new ImageIcon("Test.png");
 	private JToggleButton tb1 = new JToggleButton();
-	private JPanel b1 = new JPanel();
+	
 	
 	private ImageIcon gamelogo = new ImageIcon("rock_hewn.png");
 	private JLabel gamename = new JLabel();
@@ -62,7 +61,7 @@ public class Launcher extends JFrame{
 
 		p.setLayout(gbl);
 
-		gbc.fill = GridBagConstraints.BOTH;
+		gbc.anchor = GridBagConstraints.WEST;
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		gbc.gridheight = 1;
@@ -72,12 +71,11 @@ public class Launcher extends JFrame{
 		gbl.setConstraints(tb, gbc);
 		img.setImage(img.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
 		tb.setIcon(img);
-		b.add(tb);
-		p.add(b);
+		p.add(tb);
 		
-		gbc.fill = GridBagConstraints.BOTH;
-		gbc.gridx = 1;
-		gbc.gridy = 0;
+		gbc.anchor = GridBagConstraints.WEST;
+		gbc.gridx = 0;
+		gbc.gridy = 1;
 		gbc.gridheight = 1;
 		gbc.gridwidth = 1;
 		gbc.weightx = 1;
@@ -85,8 +83,7 @@ public class Launcher extends JFrame{
 		gbl.setConstraints(tb1, gbc);
 		img1.setImage(img1.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
 		tb1.setIcon(img1);
-		b1.add(tb1);
-		p.add(b1);
+		p.add(tb1);
 		
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridx = 1;
@@ -111,7 +108,7 @@ public class Launcher extends JFrame{
 		gbl.setConstraints(text, gbc);
 		text.setOpaque(false);
 		fortext.add(text);
-		p.add(fortext);
+		p.add(text);
 		
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridx = 2;

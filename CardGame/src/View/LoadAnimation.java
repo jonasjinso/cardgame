@@ -78,11 +78,11 @@ public class LoadAnimation extends JPanel implements Runnable {
 
 	@Override
 	public void run() {
-		while(x != 1000){
+		while(x != 680){
 			
 			
 				try {
-					Thread.sleep(100);
+					Thread.sleep(10);
 					repaint();
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block

@@ -32,7 +32,7 @@ public class Launcher extends JFrame{
 	private JToggleButton tb1 = new JToggleButton();
 	
 	
-	private ImageIcon gamelogo = new ImageIcon("rock_hewn.png");
+	private ImageIcon gamelogo = new ImageIcon("RH_NAME.png");
 	private JLabel gamename = new JLabel();
 	private JPanel logo = new JPanel();
 

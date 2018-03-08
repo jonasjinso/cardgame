@@ -11,10 +11,9 @@ public class Launcher extends JFrame{
 	private GridBagConstraints gbc = new GridBagConstraints();
 
 	private JMenuBar mb = new JMenuBar();
-	private JMenu m;
 	private JMenu friend;
-	
-
+	private JMenu games;
+	private JMenu chat;
 	
 	
 
@@ -44,7 +43,14 @@ public class Launcher extends JFrame{
 	
 	public Launcher(){
 		super("Rock-Hewn-Launcher");
-		setSize(1200,600);
+		setSize(1200,700);
+		
+		mb.add(Box.createRigidArea(new Dimension(0,50)));
+		
+		games = new JMenu("Games");
+		mb.add(games);
+		chat = new JMenu("Chat");
+		mb.add(chat);
 		
 		//Align-Right
 		mb.add(Box.createHorizontalGlue());

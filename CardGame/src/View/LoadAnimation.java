@@ -25,6 +25,9 @@ public class LoadAnimation extends JPanel implements Runnable {
 	}
 
 	public LoadAnimation(){
+		Thread t1 = new Thread(this);
+		t1.start();
+		
 		setBackground(Color.BLACK);
 		
 	}
@@ -68,26 +71,31 @@ public class LoadAnimation extends JPanel implements Runnable {
 		
 		
 		
-		repaint();
+	
 	}
 	
 	
 
 	@Override
 	public void run() {
-		while(x != 10){
+		while(x != 680){
 			
-			if(b == false){
+			
 				try {
+
 					Thread.sleep(1000);
 					b = true;
 					//repaint();
+
+					Thread.sleep(10);
+					repaint();
+
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
-			}
+			
 		}
 		
 	}

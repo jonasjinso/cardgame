@@ -12,7 +12,7 @@ public class LoadAnimation extends JPanel implements Runnable {
 	private int hoehe;
 
 	private Image img;
-	
+	private int x = 1;
 
 	public Dimension getPreferredSize(){
 		return new Dimension(breite, hoehe);
@@ -25,8 +25,11 @@ public class LoadAnimation extends JPanel implements Runnable {
 	}
 
 	public LoadAnimation(){
+		Thread t1 = new Thread(this);
+		t1.start();
+		
 		setBackground(Color.BLACK);
-
+		
 	}
 	
 	private int i = 0;
@@ -47,12 +50,13 @@ public class LoadAnimation extends JPanel implements Runnable {
 		//g.setColor(Color.RED);
 		//g.fillRect(380, 200, 40, 130);
 		
-		if(b == true){
+		
 			g.setColor(Color.RED);
-			g.fillRect(380, 200, 40, 130);
+			g.fillRect(380, 200, 40+x, 130);
+		
+			
 			x++;
-			b = false;
-		}
+		
 		
 		
 		img = getToolkit().getImage("logoHearthstone_Rock_HEwn.png");
@@ -67,26 +71,31 @@ public class LoadAnimation extends JPanel implements Runnable {
 		
 		
 		
-		repaint();
+	
 	}
 	
-	private int x = 0;
+	
 
 	@Override
 	public void run() {
-		while(x != 10){
+		while(x != 680){
 			
-			if(b == false){
+			
 				try {
-					Thread.sleep(1000);
+
+					
 					b = true;
+					//repaint();
+
+					Thread.sleep(10);
 					repaint();
+
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
-			}
+			
 		}
 		
 	}

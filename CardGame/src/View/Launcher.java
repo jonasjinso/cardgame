@@ -71,7 +71,7 @@ public class Launcher extends JFrame{
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		gbc.gridheight = 1;
-		gbc.gridwidth = 1;
+		gbc.gridwidth = 10;
 		gbc.weightx = 1;
 		gbc.weighty = 1;
 		gbl.setConstraints(tb, gbc);

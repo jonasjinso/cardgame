@@ -37,6 +37,8 @@ public class GameTable extends JFrame {
 	private JButton endTurn = new JButton("Turn End");
 	private JPanel bendTurn = new JPanel();
 	
+	private ImageIcon deck = new ImageIcon("deck.png");
+	
 	private JLabel yCards = new JLabel("30");
 	private JPanel pyCards = new JPanel();
 	
@@ -89,28 +91,30 @@ public class GameTable extends JFrame {
 		}
 		
 		//eCards.setPreferredSize(new Dimension(150,50));
-		peCards.setBackground(Color.BLACK);
+		//peCards.setBackground(Color.BLACK);
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridx = 11;
 		gbc.gridy = 0;
 		gbc.gridheight = 1;
 		gbc.gridwidth = 1;
-		gbc.weightx = 8;
+		gbc.weightx = 1;
 		gbc.weighty = 1;
 		gbl.setConstraints(peCards, gbc);
+		eCards.setIcon(deck);
 		peCards.add(eCards);
 		p.add(peCards);
 		
 		//yCards.setPreferredSize(new Dimension(150,50));
-		pyCards.setBackground(Color.BLACK);
+		//pyCards.setBackground(Color.BLACK);
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridx = 11;
 		gbc.gridy = 3;
 		gbc.gridheight = 1;
 		gbc.gridwidth = 1;
-		gbc.weightx = 8;
+		gbc.weightx = 1;
 		gbc.weighty = 1;
 		gbl.setConstraints(pyCards, gbc);
+		yCards.setIcon(deck);
 		pyCards.add(yCards);
 		p.add(pyCards);
 		

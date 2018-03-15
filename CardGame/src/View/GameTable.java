@@ -37,9 +37,12 @@ public class GameTable extends JFrame {
 	private JButton endTurn = new JButton("Turn End");
 	private JPanel bendTurn = new JPanel();
 	
-	private JLabel yCards = new JLabel();
-	private JLabel eCards = new JLabel();
-	//private 
+	private JLabel yCards = new JLabel("30");
+	private JPanel pyCards = new JPanel();
+	
+	private JLabel eCards = new JLabel("30");
+	private JPanel peCards = new JPanel();
+	
 
 
 	public GameTable(){
@@ -84,6 +87,34 @@ public class GameTable extends JFrame {
 			p.add(phand[i]);
 
 		}
+		
+		//eCards.setPreferredSize(new Dimension(150,50));
+		peCards.setBackground(Color.BLACK);
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.gridx = 11;
+		gbc.gridy = 0;
+		gbc.gridheight = 1;
+		gbc.gridwidth = 1;
+		gbc.weightx = 8;
+		gbc.weighty = 1;
+		gbl.setConstraints(peCards, gbc);
+		peCards.add(eCards);
+		p.add(peCards);
+		
+		//yCards.setPreferredSize(new Dimension(150,50));
+		pyCards.setBackground(Color.BLACK);
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.gridx = 11;
+		gbc.gridy = 3;
+		gbc.gridheight = 1;
+		gbc.gridwidth = 1;
+		gbc.weightx = 8;
+		gbc.weighty = 1;
+		gbl.setConstraints(pyCards, gbc);
+		pyCards.add(yCards);
+		p.add(pyCards);
+		
+		
 
 		for(int i = 0; i < fieldY.length;i++){
 
@@ -125,7 +156,7 @@ public class GameTable extends JFrame {
 		
 		endTurn.setPreferredSize(new Dimension(150,80));
 		gbc.fill = GridBagConstraints.BOTH;
-		gbc.gridx = 9;
+		gbc.gridx = 11;
 		gbc.gridy = 2;
 		gbc.gridheight = 1;
 		gbc.gridwidth = 1;
@@ -134,70 +165,6 @@ public class GameTable extends JFrame {
 		gbl.setConstraints(bendTurn, gbc);
 		bendTurn.add(endTurn);
 		p.add(bendTurn);
-
-
-		/*
-		gbc.anchor = GridBagConstraints.WEST;
-		gbc.gridx = 0;
-		gbc.gridy = 0;
-		gbc.gridheight = 1;
-		gbc.gridwidth = 1;
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbl.setConstraints(tb, gbc);
-		img.setImage(img.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
-		tb.setIcon(img);
-		p.add(tb);
-
-		gbc.anchor = GridBagConstraints.WEST;
-		gbc.gridx = 0;
-		gbc.gridy = 1;
-		gbc.gridheight = 1;
-		gbc.gridwidth = 1;
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbl.setConstraints(tb1, gbc);
-		img1.setImage(img1.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
-		tb1.setIcon(img1);
-		p.add(tb1);
-
-		gbc.fill = GridBagConstraints.BOTH;
-		gbc.gridx = 1;
-		gbc.gridy = 0;
-		gbc.gridheight = 1;
-		gbc.gridwidth = 1;
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbl.setConstraints(gamename, gbc);
-		gamelogo.setImage(gamelogo.getImage().getScaledInstance(656, 164, Image.SCALE_SMOOTH));
-		gamename.setIcon(gamelogo);
-		logo.add(gamename);
-		p.add(logo);
-
-		gbc.fill = GridBagConstraints.BOTH;
-		gbc.gridx = 1;
-		gbc.gridy = 1;
-		gbc.gridheight = 1;
-		gbc.gridwidth = 1;
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbl.setConstraints(text, gbc);
-		text.setOpaque(false);
-		fortext.add(text);
-		p.add(text);
-
-		gbc.fill = GridBagConstraints.BOTH;
-		gbc.gridx = 2;
-		gbc.gridy = 2;
-		gbc.gridheight = 1;
-		gbc.gridwidth = 1;
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbl.setConstraints(go, gbc);
-		play.setPreferredSize(new Dimension(200,100));
-		go.add(play);
-
-		p.add(go);*/
 
 		c.add(p, BorderLayout.CENTER);
 

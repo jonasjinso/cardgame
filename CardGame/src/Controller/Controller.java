@@ -13,6 +13,7 @@ public class Controller {
 	//private Launcher lau = new Launcher();
 	//private LoadingScreen ls = new LoadingScreen();
 	private GameTable gt = new GameTable();
+	//private
 	
 	public Controller(){
 		

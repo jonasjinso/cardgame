@@ -83,12 +83,23 @@ public class LoadAnimation extends JPanel implements Runnable {
 			
 				try {
 
+
+
+
+
 					
 					b = true;
 					//repaint();
 
+
+
+
+
 					Thread.sleep(10);
 					repaint();
+
+
+
 
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block

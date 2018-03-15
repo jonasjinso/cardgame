@@ -39,6 +39,7 @@ public class GameTable extends JFrame {
 	
 	private JLabel yCards = new JLabel();
 	private JLabel eCards = new JLabel();
+	//private 
 
 
 	public GameTable(){

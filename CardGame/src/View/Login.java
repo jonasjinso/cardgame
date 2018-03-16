@@ -62,7 +62,7 @@ public class Login extends JFrame {
 		c.add(overview);
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(false);
+		setVisible(true);
 	}
 	
 }

@@ -29,7 +29,7 @@ public class LoadAnimation extends JPanel implements Runnable {
 		t1.start();
 		
 		setBackground(Color.BLACK);
-
+		
 	}
 	
 	private int i = 0;
@@ -82,8 +82,29 @@ public class LoadAnimation extends JPanel implements Runnable {
 			
 			
 				try {
+
 					Thread.sleep(1);
+
+
+
+
+
+
+					
+					b = true;
+				
+
+
+
+
+
+					Thread.sleep(10);
+
 					repaint();
+
+
+
+
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

@@ -50,6 +50,7 @@ public class GameTable extends JFrame {
 	public GameTable(){
 		super("Rock-Hewn");
 		setSize(1920,1080);
+		setResizable(false);
 
 		p.setLayout(gbl);
 

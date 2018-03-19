@@ -83,19 +83,23 @@ public class LoadAnimation extends JPanel implements Runnable {
 			
 				try {
 
+					Thread.sleep(1);
+
+
 
 
 
 
 					
 					b = true;
-					//repaint();
+				
 
 
 
 
 
 					Thread.sleep(10);
+
 					repaint();
 
 

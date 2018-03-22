@@ -60,7 +60,7 @@ public class GameTable extends JFrame {
 
 			hand[i] = new JToggleButton("0");
 			phand[i] = new JPanel();
-			hand[0].setBackground(new Color(10,10,10,0));
+			//hand[0].setBackground(new Color(10,10,10,0));
 
 			bh.add(hand[i]);
 			be.add(enemy[i]);

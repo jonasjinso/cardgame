@@ -11,7 +11,7 @@ import View.SearchGame;
 public class Controller {
 
 	//private Login l = new Login();
-	//private Launcher lau = new Launcher();
+	private Launcher lau = new Launcher();
 	//private LoadingScreen ls = new LoadingScreen();
 	//private GameTable gt = new GameTable();
 	private SearchGame sg = new SearchGame();
